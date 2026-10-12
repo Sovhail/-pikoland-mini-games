@@ -7,47 +7,148 @@
   <meta name="description" content="Politique de confidentialité de Pikoland Mini">
   <title>Politique de confidentialité — Pikoland Mini</title>
   <style>
-    :root{--plum:#71386d;--ink:#432d4b;--coral:#ff6f61;--mango:#ffc857;--mint:#3fc5b5;--cream:#fff8e8;--lavender:#a88bea;--sky:#bcebdd;--paper:#fffdf8;--shadow:0 18px 50px #432d4b22}
-    *{box-sizing:border-box}
-    html{scroll-behavior:smooth}
-    body{margin:0;color:var(--ink);font:16px/1.7 system-ui,-apple-system,"Segoe UI",sans-serif;background:linear-gradient(180deg,#c9f1ef 0,#f1e4ff 38%,var(--cream) 100%);overflow-x:hidden}
-    a{color:var(--plum);font-weight:800;text-decoration-thickness:2px;text-underline-offset:3px}
-    a:focus-visible,button:focus-visible{outline:4px solid var(--mango);outline-offset:4px}
-    .sky{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:-1}
-    .cloud{position:absolute;width:160px;height:48px;border-radius:60px;background:#ffffffb8;filter:drop-shadow(0 8px 10px #71386d12);animation:drift 24s linear infinite}
-    .cloud:before,.cloud:after{content:"";position:absolute;border-radius:50%;background:inherit}.cloud:before{width:72px;height:72px;left:24px;bottom:0}.cloud:after{width:92px;height:92px;right:16px;bottom:0}
-    .cloud.one{top:9%;left:-190px}.cloud.two{top:31%;left:-250px;transform:scale(.7);animation-delay:-11s;animation-duration:31s}.cloud.three{top:66%;left:-210px;transform:scale(.5);animation-delay:-18s;animation-duration:27s}
-    .star{position:absolute;color:#fff;animation:twinkle 2.4s ease-in-out infinite alternate}.star:nth-child(4){left:8%;top:20%}.star:nth-child(5){right:9%;top:14%;animation-delay:-1s}.star:nth-child(6){left:14%;top:70%;animation-delay:-.5s}.star:nth-child(7){right:12%;top:55%;animation-delay:-1.6s}
-    header{min-height:440px;display:grid;place-items:center;text-align:center;padding:70px 20px 110px;position:relative}
-    header:after{content:"";position:absolute;left:-5%;right:-5%;bottom:-1px;height:90px;background:var(--paper);clip-path:polygon(0 75%,8% 56%,17% 70%,29% 40%,41% 64%,54% 34%,67% 62%,80% 42%,90% 62%,100% 45%,100% 100%,0 100%)}
-    .hero{animation:rise .8s cubic-bezier(.2,.8,.2,1) both}
-    .logo{width:110px;height:110px;display:grid;place-items:center;margin:auto;border:7px solid #fff;border-radius:34px;background:linear-gradient(145deg,var(--coral),var(--lavender));box-shadow:0 18px 35px #71386d35;transform:rotate(-4deg);font-size:58px;animation:float 3.5s ease-in-out infinite}
-    h1{margin:24px 0 8px;font-size:clamp(2.15rem,7vw,4.6rem);line-height:1.02;letter-spacing:-.045em;color:var(--plum);text-shadow:0 4px 0 #fff}
-    .subtitle{margin:0 auto;max-width:680px;font-size:clamp(1rem,2.5vw,1.25rem);font-weight:750}
-    .updated{display:inline-block;margin-top:18px;padding:7px 15px;border-radius:999px;background:#fff9;border:2px solid #fff;font-size:.88rem;font-weight:800}
-    main{max-width:940px;margin:auto;padding:20px 20px 80px;background:var(--paper)}
-    .summary{margin:-38px 0 28px;position:relative;z-index:2;display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
-    .badge{padding:18px 12px;border:3px solid #fff;border-radius:22px;text-align:center;font-weight:900;box-shadow:var(--shadow);animation:rise .7s both}.badge:nth-child(1){background:#d8f7ef}.badge:nth-child(2){background:#fff0c4;animation-delay:.1s}.badge:nth-child(3){background:#f0e4ff;animation-delay:.2s}.badge span{display:block;font-size:30px}
-    nav{margin:22px 0 30px;padding:20px;border:3px solid #eadcef;border-radius:24px;background:#fff;box-shadow:var(--shadow)}
-    nav strong{display:block;margin-bottom:8px;color:var(--plum)}nav a{display:inline-block;margin:4px 14px 4px 0}
-    section{position:relative;margin:18px 0;padding:26px 28px;border:2px solid #efe3ec;border-radius:26px;background:#fff;box-shadow:0 10px 30px #432d4b0d;transition:transform .2s,box-shadow .2s}
-    section:hover{transform:translateY(-2px);box-shadow:var(--shadow)}
-    section:before{content:attr(data-icon);position:absolute;right:22px;top:18px;font-size:38px;opacity:.9}
-    h2{margin:0 55px 12px 0;color:var(--plum);font-size:clamp(1.25rem,4vw,1.7rem);line-height:1.25}
-    h3{color:var(--plum)}p:last-child{margin-bottom:0}ul{padding-left:22px}li{margin:7px 0}strong{color:#5c315c}
-    .notice{border-color:#ffd57a;background:#fff9db}.contact{border-color:#bcebdd;background:#effcf9}.warning{padding:13px 15px;border-left:5px solid var(--coral);border-radius:8px;background:#fff0ed;font-weight:750}
-    footer{text-align:center;padding:38px 20px;color:#fff;background:var(--plum)}footer p{margin:5px}
-    .top{display:inline-grid;place-items:center;width:46px;height:46px;margin-top:18px;border-radius:50%;background:var(--mango);color:var(--ink);text-decoration:none;box-shadow:0 8px 18px #0002}
-    @keyframes drift{to{transform:translateX(calc(100vw + 420px))}}@keyframes twinkle{to{opacity:.25;transform:scale(.6) rotate(20deg)}}@keyframes float{50%{transform:translateY(-10px) rotate(4deg)}}@keyframes rise{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
-    @media(max-width:650px){header{min-height:390px;padding-top:46px}.summary{grid-template-columns:1fr;margin-top:-22px}.badge{display:flex;align-items:center;justify-content:center;gap:12px;padding:12px}.badge span{font-size:24px}main{padding-inline:14px}section{padding:22px 19px;border-radius:21px}nav{padding:17px}.cloud{opacity:.65}}
-    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation:none!important;transition:none!important}}
-    @media print{.sky,nav,.top{display:none}body,main{background:#fff}header{min-height:auto;padding:20px}header:after{display:none}.logo{box-shadow:none}section{break-inside:avoid;box-shadow:none}.summary{margin:10px 0}.badge{box-shadow:none}footer{background:#fff;color:#000}}
+    :root {
+      --ink: #35243c;
+      --muted: #6d5c73;
+      --plum: #6f3b78;
+      --plum-dark: #4d2855;
+      --violet: #9876e8;
+      --coral: #ff7468;
+      --mango: #ffc857;
+      --mint: #57cfb9;
+      --cream: #fffaf0;
+      --paper: #fffefd;
+      --line: #eadfeb;
+      --shadow: 0 24px 70px rgba(65, 37, 75, .14);
+      --soft-shadow: 0 12px 35px rgba(65, 37, 75, .08);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 24px; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      font: 16px/1.75 Inter, ui-rounded, "Segoe UI", system-ui, -apple-system, sans-serif;
+      background:
+        radial-gradient(circle at 8% 8%, rgba(255,255,255,.9) 0 5%, transparent 18%),
+        radial-gradient(circle at 92% 16%, rgba(255,216,128,.34), transparent 24%),
+        linear-gradient(150deg, #c7f1e8 0%, #e9dcff 42%, #fff5de 100%);
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background-image: radial-gradient(rgba(111,59,120,.1) 1px, transparent 1px);
+      background-size: 26px 26px;
+      mask-image: linear-gradient(to bottom, #000, transparent 65%);
+      z-index: -2;
+    }
+    a { color: var(--plum); font-weight: 800; text-decoration-thickness: 2px; text-underline-offset: 4px; }
+    a:hover { color: var(--coral); }
+    a:focus-visible { outline: 4px solid var(--mango); outline-offset: 4px; border-radius: 5px; }
+    code { padding: .15em .42em; border: 1px solid #e7dbea; border-radius: 7px; background: #f8f1fa; color: var(--plum-dark); font: .9em ui-monospace, SFMono-Regular, Consolas, monospace; }
+
+    .sky { position: fixed; inset: 0; pointer-events: none; overflow: hidden; z-index: -1; }
+    .cloud { position: absolute; width: 170px; height: 48px; border-radius: 60px; background: rgba(255,255,255,.62); filter: drop-shadow(0 10px 14px rgba(80,40,90,.08)); animation: drift 31s linear infinite; }
+    .cloud::before, .cloud::after { content: ""; position: absolute; bottom: 0; border-radius: 50%; background: inherit; }
+    .cloud::before { width: 74px; height: 74px; left: 24px; }
+    .cloud::after { width: 94px; height: 94px; right: 14px; }
+    .cloud.one { top: 10%; left: -210px; }
+    .cloud.two { top: 38%; left: -250px; scale: .72; animation-delay: -12s; animation-duration: 38s; }
+    .cloud.three { top: 72%; left: -220px; scale: .54; animation-delay: -23s; animation-duration: 34s; }
+    .star { position: absolute; color: rgba(255,255,255,.9); font-size: 20px; animation: twinkle 2.6s ease-in-out infinite alternate; }
+    .star:nth-child(4) { left: 8%; top: 20%; }
+    .star:nth-child(5) { right: 9%; top: 14%; animation-delay: -1s; }
+    .star:nth-child(6) { left: 14%; top: 70%; animation-delay: -.5s; }
+    .star:nth-child(7) { right: 12%; top: 55%; animation-delay: -1.6s; }
+
+    header { min-height: 500px; display: grid; place-items: center; position: relative; padding: 72px 20px 130px; text-align: center; }
+    header::after { content: ""; position: absolute; left: -3%; right: -3%; bottom: -1px; height: 112px; background: var(--paper); clip-path: polygon(0 74%, 9% 58%, 18% 69%, 29% 39%, 42% 64%, 54% 30%, 67% 63%, 79% 40%, 90% 64%, 100% 45%, 100% 100%, 0 100%); }
+    .hero { max-width: 800px; animation: rise .8s cubic-bezier(.2,.8,.2,1) both; }
+    .logo { width: 118px; height: 118px; display: grid; place-items: center; margin: auto; border: 8px solid rgba(255,255,255,.9); border-radius: 38px; background: linear-gradient(145deg, var(--coral), var(--violet)); box-shadow: 0 22px 45px rgba(91,43,103,.28); font-size: 62px; transform: rotate(-4deg); animation: float 4s ease-in-out infinite; }
+    h1 { margin: 26px 0 12px; color: var(--plum-dark); font-size: clamp(2.65rem, 8vw, 5.5rem); line-height: .95; letter-spacing: -.055em; text-shadow: 0 5px 0 rgba(255,255,255,.78); }
+    .subtitle { max-width: 700px; margin: 0 auto; color: #4c3a53; font-size: clamp(1rem, 2.4vw, 1.25rem); font-weight: 700; }
+    .updated { display: inline-flex; align-items: center; gap: 8px; margin-top: 22px; padding: 9px 16px; border: 1px solid rgba(255,255,255,.9); border-radius: 999px; background: rgba(255,255,255,.62); box-shadow: 0 8px 22px rgba(65,37,75,.08); font-size: .87rem; font-weight: 850; backdrop-filter: blur(12px); }
+    .updated::before { content: "✓"; display: grid; place-items: center; width: 20px; height: 20px; border-radius: 50%; background: var(--mint); color: #fff; font-size: 12px; }
+
+    main { width: min(100% - 28px, 980px); margin: 0 auto 70px; padding: 0 28px 34px; position: relative; border-radius: 0 0 36px 36px; background: var(--paper); box-shadow: var(--shadow); }
+    .summary { position: relative; z-index: 2; display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin: -48px 0 30px; }
+    .badge { min-height: 112px; display: grid; place-items: center; align-content: center; padding: 16px; border: 3px solid #fff; border-radius: 25px; text-align: center; font-weight: 900; box-shadow: var(--soft-shadow); animation: rise .7s both; }
+    .badge:nth-child(1) { background: #d8f7ef; }
+    .badge:nth-child(2) { background: #fff0c4; animation-delay: .1s; }
+    .badge:nth-child(3) { background: #f0e4ff; animation-delay: .2s; }
+    .badge span { display: block; margin-bottom: 4px; font-size: 32px; line-height: 1; }
+
+    nav { position: sticky; top: 12px; z-index: 5; margin: 20px 0 32px; padding: 16px 18px; border: 1px solid rgba(234,223,235,.9); border-radius: 22px; background: rgba(255,255,255,.9); box-shadow: var(--soft-shadow); backdrop-filter: blur(16px); }
+    nav strong { display: block; margin: 0 0 8px; color: var(--plum-dark); font-size: .78rem; letter-spacing: .12em; text-transform: uppercase; }
+    nav a { display: inline-block; margin: 3px 5px 3px 0; padding: 6px 10px; border-radius: 999px; background: #f6eff8; font-size: .86rem; text-decoration: none; transition: background .2s, color .2s, transform .2s; }
+    nav a:hover { color: #fff; background: var(--plum); transform: translateY(-1px); }
+
+    section { position: relative; margin: 18px 0; padding: 30px 32px; overflow: hidden; border: 1px solid var(--line); border-radius: 28px; background: #fff; box-shadow: 0 8px 28px rgba(65,37,75,.055); transition: border-color .2s, box-shadow .2s, transform .2s; }
+    section::before { content: attr(data-icon); position: absolute; top: 19px; right: 22px; width: 52px; height: 52px; display: grid; place-items: center; border-radius: 17px; background: linear-gradient(145deg, #fff8df, #f2e7ff); box-shadow: inset 0 0 0 1px rgba(111,59,120,.08); font-size: 27px; }
+    section::after { content: ""; position: absolute; width: 120px; height: 120px; right: -66px; bottom: -75px; border-radius: 50%; background: rgba(152,118,232,.07); }
+    section:hover { border-color: #d9c6dd; box-shadow: var(--soft-shadow); transform: translateY(-2px); }
+    h2 { margin: 0 68px 13px 0; color: var(--plum-dark); font-size: clamp(1.3rem, 4vw, 1.75rem); line-height: 1.2; letter-spacing: -.02em; }
+    h3 { color: var(--plum-dark); }
+    p { color: var(--muted); }
+    p:last-child { margin-bottom: 0; }
+    ul { padding-left: 0; list-style: none; }
+    li { position: relative; margin: 10px 0; padding-left: 28px; color: var(--muted); }
+    li::before { content: "✓"; position: absolute; left: 0; top: .08em; width: 19px; height: 19px; display: grid; place-items: center; border-radius: 50%; background: #d8f7ef; color: #218a76; font-size: 11px; font-weight: 950; }
+    strong { color: #56305d; }
+    .notice { border-color: #f5d37f; background: linear-gradient(135deg, #fff9df, #fffef8); }
+    .contact { border-color: #aee6dc; background: linear-gradient(135deg, #effcf9, #fbfffe); }
+    .warning { padding: 14px 16px; border-left: 5px solid var(--coral); border-radius: 10px; background: #fff0ed; color: #6d403d; font-weight: 750; }
+
+    footer { padding: 50px 20px; color: rgba(255,255,255,.8); text-align: center; background: linear-gradient(135deg, var(--plum-dark), var(--plum)); }
+    footer strong { color: #fff; font-size: 1.2rem; }
+    footer p { margin: 4px; }
+    .top { display: inline-grid; place-items: center; width: 48px; height: 48px; margin-top: 20px; border-radius: 50%; background: var(--mango); box-shadow: 0 10px 25px rgba(0,0,0,.2); color: var(--ink); font-size: 1.3rem; text-decoration: none; transition: transform .2s; }
+    .top:hover { color: var(--ink); transform: translateY(-3px); }
+
+    @keyframes drift { to { transform: translateX(calc(100vw + 450px)); } }
+    @keyframes twinkle { to { opacity: .25; transform: scale(.65) rotate(20deg); } }
+    @keyframes float { 50% { transform: translateY(-11px) rotate(3deg); } }
+    @keyframes rise { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
+
+    @media (max-width: 700px) {
+      header { min-height: 440px; padding: 50px 16px 110px; }
+      .logo { width: 96px; height: 96px; border-radius: 31px; font-size: 50px; }
+      main { width: min(100% - 16px, 980px); padding: 0 12px 24px; border-radius: 0 0 26px 26px; }
+      .summary { grid-template-columns: 1fr; gap: 9px; margin-top: -34px; }
+      .badge { min-height: 64px; display: flex; gap: 11px; padding: 10px 14px; }
+      .badge span { margin: 0; font-size: 25px; }
+      nav { top: 7px; padding: 14px; border-radius: 18px; }
+      nav a { font-size: .8rem; }
+      section { padding: 25px 20px; border-radius: 22px; }
+      section::before { top: 17px; right: 16px; width: 44px; height: 44px; border-radius: 14px; font-size: 23px; }
+      h2 { margin-right: 52px; }
+      .cloud { opacity: .55; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { animation: none !important; transition: none !important; }
+    }
+    @media print {
+      .sky, nav, .top { display: none; }
+      body, main { background: #fff; }
+      header { min-height: auto; padding: 24px; }
+      header::after { display: none; }
+      .logo { box-shadow: none; }
+      main { width: 100%; margin: 0; box-shadow: none; }
+      .summary { margin: 10px 0; }
+      .badge, section { break-inside: avoid; box-shadow: none; }
+      footer { color: #000; background: #fff; }
+    }
   </style>
 </head>
 <body id="top">
   <div class="sky" aria-hidden="true"><i class="cloud one"></i><i class="cloud two"></i><i class="cloud three"></i><b class="star">✦</b><b class="star">★</b><b class="star">✦</b><b class="star">★</b></div>
   <header>
-    <div class="hero"><div class="logo" aria-hidden="true">🏡</div><h1>Confidentialité</h1><p class="subtitle">Une explication claire de la façon dont Pikoland Mini protège la progression et traite les données techniques.</p><span class="updated">Mise à jour : 8 octobre 2026</span></div>
+    <div class="hero"><div class="logo" aria-hidden="true">🏡</div><h1>Confidentialité</h1><p class="subtitle">Une explication claire de la façon dont Pikoland Mini protège la progression et traite les données techniques.</p><span class="updated">Mise à jour : 12 octobre 2026</span></div>
   </header>
   <main>
     <div class="summary" aria-label="Résumé"><div class="badge"><span>🔐</span>Sans compte</div><div class="badge"><span>📍</span>Sans position précise</div><div class="badge"><span>🧸</span>Configuration enfant</div></div>
@@ -55,19 +156,19 @@
 
     <section class="notice" data-icon="📜"><h2>À propos de cette politique</h2><p>Cette politique décrit le traitement des données dans l’application Android <strong>Pikoland Mini</strong> (<code>com.pikoland.minigame</code>). L’application est conçue pour une audience enfant et familiale et fonctionne sans création de compte Pikoland Mini.</p></section>
 
-    <section id="local" data-icon="💾"><h2>Données enregistrées localement</h2><p>La progression, les réglages, les créations, le temps de jeu et les droits débloqués sont enregistrés dans le stockage local de l’appareil. Ils ne sont pas transmis à un serveur exploité par l’éditeur.</p><p>L’application ne demande pas de compte Pikoland Mini, nom, adresse e-mail, contacts, position précise, caméra ou microphone. Elle a besoin d’un accès à Internet pour les services Google décrits ci-dessous.</p></section>
+    <section id="local" data-icon="💾"><h2>Données enregistrées localement</h2><p>La progression, les réglages, les créations, le temps de jeu et les droits débloqués sont enregistrés dans le stockage local de l’appareil. Ils ne sont pas transmis à un serveur exploité par l’éditeur.</p><p>L’application ne demande pas de compte Pikoland Mini, nom, adresse e-mail, contacts, position précise, caméra ou microphone. Elle a besoin d’un accès à Internet pour les services publicitaires et Google Play décrits ci-dessous.</p></section>
 
-    <section id="ads" data-icon="📺"><h2>Publicité récompensée et Google Mobile Ads</h2><p>L’application utilise <strong>Google Mobile Ads SDK 25.5.0</strong> uniquement lorsqu’un utilisateur choisit explicitement de regarder une publicité récompensée. Elle n’affiche ni bannière, ni publicité interstitielle imposée. Selon la <a href="https://developers.google.com/admob/android/privacy/play-data-disclosure?hl=fr">documentation de Google</a>, le SDK collecte et partage automatiquement avec Google, pour la publicité, l’analyse et la prévention de la fraude :</p><ul><li>l’adresse IP, qui peut servir à estimer une zone géographique générale ;</li><li>les interactions avec l’application et les annonces, notamment les lancements, touchers et vues vidéo ;</li><li>les informations de diagnostic et de performance, par exemple le temps de lancement, les blocages et l’utilisation d’énergie ;</li><li>des identifiants d’appareil ou de compte, notamment l’identifiant d’ensemble d’applications et, le cas échéant, d’autres identifiants liés aux comptes présents sur l’appareil.</li></ul><p>Le manifeste Android retire les autorisations liées à l’identifiant publicitaire Android (<code>AD_ID</code>), à Topics et à l’attribution publicitaire. Le retrait de <code>AD_ID</code> n’empêche pas la collecte des autres catégories techniques indiquées ci-dessus. Les annonces sont configurées comme destinées aux enfants, non personnalisées et limitées au contenu classé G. Les données du SDK sont chiffrées en transit.</p><p>Lorsque la réglementation l’exige, la plate-forme de gestion du consentement de Google peut présenter des choix de confidentialité. Ces options peuvent aussi être ouvertes depuis l’écran <strong>Confidentialité</strong>. Google traite ces données selon sa <a href="https://policies.google.com/privacy?hl=fr">Politique de confidentialité</a>. L’éditeur ne vend pas de données personnelles.</p></section>
+    <section id="ads" data-icon="📺"><h2>Publicité récompensée et Unity LevelPlay</h2><p>L’application utilise <strong>Unity LevelPlay SDK 9.6.1</strong> uniquement lorsqu’un utilisateur choisit explicitement de regarder une publicité récompensée. Elle n’affiche ni bannière, ni publicité interstitielle imposée. Selon la <a href="https://unity.com/legal/game-player-and-app-user-privacy-policy">politique de confidentialité Unity</a>, Unity et les sources publicitaires activées peuvent traiter l’adresse IP, les interactions avec les annonces, des informations sur l’appareil et des diagnostics pour fournir et mesurer les annonces et prévenir la fraude.</p><p>Le manifeste Android retire les autorisations liées à l’identifiant publicitaire Android (<code>AD_ID</code>), à Topics et à l’attribution publicitaire. Avant son initialisation, LevelPlay reçoit les signaux enfant (<code>COPPA</code>) et désactivation de l’identifiant d’appareil. Les sources activées dans le tableau de bord doivent rester compatibles avec Google Play Families. L’éditeur ne vend pas de données personnelles.</p></section>
 
     <section id="purchases" data-icon="🛍️"><h2>Achat Google Play</h2><p>L’achat ponctuel permanent « Tout débloquer · Sans publicité » (<code>pikoland_unlock_all</code>) est traité par <strong>Google Play Billing 9.1.0</strong>. Google traite le paiement, l’historique d’achat et les informations nécessaires à la prévention de la fraude.</p><p>Sur l’appareil, l’application traite l’identifiant du produit, l’état de l’achat, son état de confirmation et le jeton de transaction fourni par Google Play afin de confirmer, reconnaître et restaurer l’achat. Ces informations ne sont pas envoyées à un serveur de l’éditeur. L’application ne reçoit jamais le numéro de carte bancaire. Consultez les <a href="https://play.google.com/intl/fr_fr/about/play-terms/">conditions d’utilisation de Google Play</a>.</p><p>Le droit débloqué est aussi mémorisé localement. Un achat en attente n’est accordé qu’après confirmation de son paiement. La suppression des données locales ne supprime, n’annule et ne rembourse pas l’achat conservé dans le compte Google Play ; il peut être restauré depuis l’application.</p></section>
 
-    <section data-icon="🎯"><h2>Finalités du traitement</h2><ul><li>Les données locales servent au fonctionnement, à la personnalisation et à la continuité du jeu.</li><li>Les données techniques traitées par Google servent à fournir la publicité récompensée demandée, mesurer son fonctionnement, diagnostiquer les erreurs et prévenir la fraude.</li><li>Les données d’achat servent à exécuter, confirmer et restaurer l’achat demandé.</li></ul></section>
+    <section data-icon="🎯"><h2>Finalités du traitement</h2><ul><li>Les données locales servent au fonctionnement, à la personnalisation et à la continuité du jeu.</li><li>Les données techniques traitées par Unity LevelPlay et les sources activées servent à fournir la publicité récompensée demandée, mesurer son fonctionnement, diagnostiquer les erreurs et prévenir la fraude.</li><li>Les données d’achat servent à exécuter, confirmer et restaurer l’achat demandé.</li></ul></section>
 
-    <section id="deletion" data-icon="🧹"><h2>Conservation, suppression et droits</h2><p>Les données locales peuvent être effacées immédiatement dans <strong>Confidentialité → Effacer mes données locales</strong>, dans les paramètres Android ou en désinstallant l’application. L’éditeur ne peut pas effacer directement les données détenues par Google ; les règles, outils et durées de conservation de Google s’appliquent.</p><p>Selon la législation applicable, un parent ou tuteur peut demander l’accès, la rectification, l’effacement, la limitation ou l’opposition au traitement d’une donnée détenue par l’éditeur. Comme aucun compte ni serveur utilisateur n’est exploité par l’éditeur, celui-ci ne possède normalement pas les données locales permettant d’identifier un joueur. Une réclamation peut être adressée à l’autorité de protection des données compétente.</p></section>
+    <section id="deletion" data-icon="🧹"><h2>Conservation, suppression et droits</h2><p>Les données locales peuvent être effacées immédiatement dans <strong>Confidentialité → Effacer mes données locales</strong>, dans les paramètres Android ou en désinstallant l’application. L’éditeur ne peut pas effacer directement les données détenues par Unity, les sources publicitaires ou Google Play ; leurs règles, outils et durées de conservation s’appliquent.</p><p>Selon la législation applicable, un parent ou tuteur peut demander l’accès, la rectification, l’effacement, la limitation ou l’opposition au traitement d’une donnée détenue par l’éditeur. Comme aucun compte ni serveur utilisateur n’est exploité par l’éditeur, celui-ci ne possède normalement pas les données locales permettant d’identifier un joueur. Une réclamation peut être adressée à l’autorité de protection des données compétente.</p></section>
 
     <section id="children" data-icon="🌈"><h2>Protection des enfants</h2><p>Pikoland Mini ne propose ni chat, ni profil public, ni partage social, ni collecte volontaire d’informations personnelles. Les protections publicitaires sont activées pour tous les utilisateurs. Les achats facultatifs passent par Google Play après une barrière parentale. Un parent ou tuteur peut effacer à tout moment la progression locale depuis l’application.</p></section>
 
-    <section id="security" data-icon="🛡️"><h2>Sécurité et transferts</h2><p>L’application interdit le trafic réseau non chiffré. Les communications des SDK Google sont chiffrées en transit. Google peut traiter des données dans des pays autres que celui de l’utilisateur, conformément à ses mécanismes juridiques et à sa politique de confidentialité.</p></section>
+    <section id="security" data-icon="🛡️"><h2>Sécurité et transferts</h2><p>L’application interdit le trafic réseau non chiffré. Unity, les sources publicitaires activées et Google peuvent traiter des données dans des pays autres que celui de l’utilisateur, conformément à leurs mécanismes juridiques et politiques de confidentialité.</p></section>
 
     <section data-icon="🔄"><h2>Modifications</h2><p>Cette politique sera mise à jour si les fonctionnalités, SDK ou pratiques de données changent. La date affichée en haut de cette page sera alors modifiée.</p></section>
 
